@@ -7,12 +7,13 @@ using System.Web.UI.WebControls;
 using System.Web.Script.Serialization;
 using System.Net;
 using Newtonsoft.Json;
+using System.Configuration;
 
 namespace CustomerApi2Client
 {
     public partial class Update : System.Web.UI.Page
     {
-        public string url = "https://localhost:44375/api/customers";
+        string url = ConfigurationManager.AppSettings["ServerUrl"];
 
         protected void Page_Load(object sender, EventArgs e)
         {
